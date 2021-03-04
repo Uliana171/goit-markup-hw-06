@@ -39,27 +39,11 @@ h1 {
   margin-right: auto;
 }
 
-.btn-open {
-  background-color: var(--blue-text);
-  color: var(--white-text);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-
+.hero > .container > .blue-btn {
   display: block;
-  text-align: center;
-  max-width: 100%;
-  padding: 0px;
-
-  width: 200px;
-  min-height: 50px;
-  border: none;
-
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .btn-open:hover, .hero-btn:focus {
@@ -77,6 +61,8 @@ h1 {
   height: 100% ;
 
   background-color:rgba(0, 0, 0, 0.2);
+
+  z-index: 2;
 }
 
 .backdrop.is-hidden{
@@ -96,24 +82,25 @@ h1 {
   padding: 40px;
 
   background-color: white;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .btn-close{
   position: absolute;
-  top: 12px;
-  right: 31px;
-  border-radius: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 6px;
-  color: rgba(0, 0, 0, 1);
-;
-}
+  top: 8px;
+  right: 8px;
 
-.close-icon{
-  display: flex;
-  fill: currentColor;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
 }
 /* модальне вікно */
 
@@ -132,26 +119,70 @@ h1 {
 }
 
 .form-item{
-  background-color: salmon;
+  color: var(--modal-text);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 
+  position: relative;
 }
 
 .form-item label{
   margin-bottom: 4px;
+
 }
 
 .form-item input{
+  min-height: 40px;
+
   padding-left: 12px;
+  
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+ 
   
 }
 
-.form-item input::placeholder{
+.form-icon{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+
+  left: 12px;
+  bottom: 11px;
+
+}
+
+.form-item textarea::placeholder{
   /* до placeholder можна застосувати тільки оформлення тексту */
   color: rgba(117, 117, 117, 0.5);
-  
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.coment-textarea{
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  margin-bottom: 10px;
 }
 
 .agree-option input[type="checkbox"]{
@@ -160,18 +191,30 @@ h1 {
   height: 15px;
 }
 
-.coment-textarea{
-  resize: none;
-  height: 120px;
-  padding: 12px 16px;
+.agree-option label{
+  color: var(--modal-text);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 }
 
+.agree-option{
+  margin-bottom: 30px;
+  margin-left: 12px;
+}
+
+.modal > .blue-btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
 /* контент модального вікна */
 
-
-
-
 /* заголовок з кнопкою */
+
 
 
 /* наші переваги */
@@ -254,6 +297,8 @@ h1 {
 .servises-items {
   margin-right: 30px;
   position: relative;
+
+  z-index: 1;
 
 }
 

@@ -66,7 +66,7 @@
 
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
 
-                <button class="btn-open" data-modal-open>Заказать услугу</button>
+                <button class="blue-btn" data-modal-open>Заказать услугу</button>
 
                 <div class="backdrop is-hidden" data-modal>
 
@@ -81,16 +81,25 @@
                                 <li class="form-item">
                                     <label for="name">Имя</label>
                                     <input type="text" name="name" id="name">
+                                    <svg class="form-icon" width="10px" height="16px">
+                                        <use href="./images/sprite.svg#name"></use>
+                                    </svg>
                                 </li>
 
                                 <li class="form-item">
                                     <label for="phone">Телефон</label>
                                     <input type="tel" name="phone" id="phone">
+                                    <svg class="form-icon" width="10px" height="16px">
+                                        <use href="./images/sprite.svg#phone"></use>
+                                    </svg>
                                 </li>
 
                                 <li class="form-item">
                                     <label for="e-mail">Почта</label>
                                     <input type="mail" name="e-mail" id="e-mail">
+                                    <svg class="form-icon" width="10px" height="16px">
+                                        <use href="./images/sprite.svg#letter"></use>
+                                    </svg>
                                 </li>
 
                                 <li class="form-item">
@@ -106,17 +115,15 @@
                                 </div>
                             </ul>
 
-                            
-
                         </form>
 
                         <button class="btn-close" data-modal-close>
-                            <svg class="close-icon" width="11px" height="11px">
+                            <svg width="11px" height="11px">
                                 <use href="./images/sprite.svg#close"></use>
                             </svg>
                         </button>
 
-                        <button type="send" class="subscribe-btn">Отправить</button>
+                        <button type="submit" class="blue-btn">Отправить</button>
 
                     </div>
                 </div>
@@ -558,7 +565,7 @@
                         <input class="mail-input" type="mail" name="e-mail" id="e-mail" placeholder="E-mail">
                     </div>
                     
-                    <button type="submit" class="subscribe-btn">Подписаться
+                    <button type="submit" class="blue-btn">Подписаться
                     
                         <svg class="send-icon" width="24" height="24">
                             <use href="./images/sprite.svg#send"></use>
