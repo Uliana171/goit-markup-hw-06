@@ -79,38 +79,50 @@
                             <ul class="form-list">
 
                                 <li class="form-item">
-                                    <label for="name">Имя</label>
-                                    <input type="text" name="name" id="name">
+
+                                    <label class="form-label" for="name">Имя</label>
+                                    <input class="form-input" type="text" name="name" id="name">
                                     <svg class="form-icon" width="10px" height="16px">
                                         <use href="./images/sprite.svg#name"></use>
                                     </svg>
+                                    
                                 </li>
 
                                 <li class="form-item">
-                                    <label for="phone">Телефон</label>
-                                    <input type="tel" name="phone" id="phone">
+                                    <label class="form-label" for="phone">Телефон</label>
+                                    <input class="form-input" type="tel" name="phone" id="phone">
                                     <svg class="form-icon" width="10px" height="16px">
                                         <use href="./images/sprite.svg#phone"></use>
                                     </svg>
+                                    
                                 </li>
 
                                 <li class="form-item">
-                                    <label for="e-mail">Почта</label>
-                                    <input type="mail" name="e-mail" id="e-mail">
+                                    <label  class="form-label" for="e-mail">Почта</label>
+                                    <input class="form-input" type="mail" name="e-mail" id="e-mail">
                                     <svg class="form-icon" width="10px" height="16px">
                                         <use href="./images/sprite.svg#letter"></use>
                                     </svg>
                                 </li>
 
                                 <li class="form-item">
-                                    <label for="comment">Комментарий</label>
+                                    <label class="form-label" for="comment">Комментарий</label>
                                     <textarea class="coment-textarea" name="comment" id="comment" placeholder="Введите текст"></textarea>
                                 </li>
                                 
                                 <div role="group" class="agree-option">
-                                
-                                    <input type="checkbox" name="agree" value="" id="agree">
-                                    <label for="agree">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+
+                                    <label class="agree-label" for="agree">
+
+                                        <input class="checkbox" type="checkbox" name="agree" value="" id="agree">
+                                        <svg class="check-icon" width="16px" height="15px">
+                                            <use href="./images/sprite.svg#check-icon"></use>
+                                        </svg>
+                            
+                                        Соглашаюсь с рассылкой и принимаю
+                                        <a class="agree-link" href="#">Условия договора</a>
+
+                                    </label>
                                 
                                 </div>
                             </ul>
@@ -123,7 +135,7 @@
                             </svg>
                         </button>
 
-                        <button type="submit" class="blue-btn">Отправить</button>
+                        <button type="submit" class="blue-btn" >Отправить</button>
 
                     </div>
                 </div>
