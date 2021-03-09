@@ -108,6 +108,12 @@ h1 {
   fill: var(--blue-text);
 }
 
+.btn-close:hover,
+.btn-close:focus{
+  outline: none;
+}
+
+
 /* модальне вікно */
 
 
@@ -217,7 +223,7 @@ h1 {
 }
 
 .checkbox {
-  width: 15px;
+  width: 16px;
   height: 14px;
 }
 
@@ -276,9 +282,6 @@ h1 {
   margin-bottom: 40px;
 }
 /* контент модального вікна */
-
-/* заголовок з кнопкою */
-
 
 
 /* наші переваги */
