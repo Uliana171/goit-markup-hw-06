@@ -1,5 +1,7 @@
 /* перемінні кольорів = всі кольори на сторінці, :root означає застосування для всього документу */
 :root {
+  --link-color: rgba(33, 150, 243, 1);
+
   --blue-text: rgba(33, 150, 243, 1);
 
   --black: rgba(0, 0, 0, 1);
@@ -12,16 +14,13 @@
 
   --white-background: rgba(255, 255, 255, 1);
   --grphite-background: rgba(47, 48, 58, 1);
+
   --button-background: rgba(245, 244, 250, 1);
   --button-active: rgba(24, 140, 232, 1);
 
   --footer-icon-background: rgba(255, 255, 255, 0.1);
 
   --gray-line: rgba(236, 236, 236, 1);
-
-  --submit-text: rgba(255, 255, 255, 0.6);
-  --submit-border: rgba(255, 255, 255, 0.3);
-  --submit-shadou: rgba(0px 4px 4px 0, 0, 0, 0.15);
 
   --white-border: rgba(238, 238, 238, 1);
 
@@ -33,7 +32,8 @@
     rgba(0px 1px 2px 0px 0, 0, 0, 0, 08), rgba(0px 3px 1px 0px 0, 0, 0, 0, 1);
   --project-gap: 30px;
 
-  --modal-text: rgba(117, 117, 117, 1);
+  --submit-border: rgba(255, 255, 255, 0.3);
+  --submit-text: rgba(255, 255, 255, 0.6);
 }
 
 /* зробити невидимим заголовок */
@@ -59,12 +59,26 @@ ul {
   margin-block-end: 0px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* дизайн логотипу */
@@ -78,29 +92,20 @@ body {
   letter-spacing: 0.03em;
 }
 
+.logo:active,
+.logo:hover,
+.logo:focus {
+  color: var(--link-color);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .logo > .web {
   color: var(--blue-text);
 }
 
-.logo > .studio {
-  color: var(--white-text);
-}
-
-/* всі посилання при ховері */
-.link:hover,
-.link:focus,
-.link:active {
-  color: var(--blue-text);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link {
-  text-decoration: none;
-}
-
-.header,
-.manu-nav,
-.nav-list,
+.page-header > .container,
+nav .navigation-list,
 .contacts-header {
   display: flex;
   align-items: center; /* центрувати по вертикалі */
@@ -108,36 +113,43 @@ body {
 
 /*силки навігації в хедері */
 
-.manu-nav .link .nav {
-  color: var(--blue-text);
+.navigation-list {
+  margin-left: 93px;
 }
 
-.nav {
+.navigation-list li {
+  margin-right: 50px;
+}
+
+.navigation-list li:last-child {
+  margin-right: 0px;
+}
+
+.navigation {
   color: var(--black-text);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-}
-.manu-nav {
-  margin-left: 93px;
-}
 
-.nav-list li {
-  margin-right: 50px;
-}
-
-.nav-list li:last-child {
-  margin-right: 0px;
-}
-
-.nav {
   position: relative;
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.nav::after {
+.navigation:focus,
+.navigation:hover {
+  color: var(--blue-text);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list .current {
+  position: relative;
+  color: var(--blue-text);
+}
+
+.navigation::after {
   content: "";
   height: 4px;
   width: 100%;
@@ -150,9 +162,16 @@ body {
   margin-top: 30px;
   position: absolute;
   bottom: -1px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav:hover::after {
+.navigation:hover::after,
+.navigation:focus::after {
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list .current::after {
   transform: scaleX(1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -230,6 +249,18 @@ body {
   margin-bottom: 20px;
 }
 
+.logo > .studio {
+  color: var(--white-text);
+}
+
+.logo .studio:active,
+.logo .studio:hover,
+.logo .studio:focus {
+  color: var(--link-color);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .address {
   min-width: 81px;
 }
@@ -251,6 +282,13 @@ body {
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
+}
+.contacts-footer:active,
+.contacts-footer:focus,
+.contacts-footer:hover {
+  color: var(--link-color);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-footer-list li {
@@ -362,6 +400,7 @@ body {
   border: 1px solid var(--submit-border);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
 }
 
 .subscribe-input > .blue-btn {
@@ -401,13 +440,6 @@ body {
 .blue-btn:focus,
 .blue-btn:active {
   background-color: var(--button-active);
-}
-
-h3 {
-  margin: 0px;
-}
-h2 {
-  margin: 0;
 }
 
 /* footer */

@@ -1,6 +1,3 @@
-h1 {
-  margin: 0px;
-}
 
 /* заголовок з кнопкою */
 .hero {
@@ -101,6 +98,7 @@ h1 {
   display: inline-flex;
   width: 30px;
   height: 30px;
+  background: transparent;
 }
 
 .btn-close > svg:hover,
@@ -557,8 +555,3 @@ fill: currentColor
 
 /* наші клієнти */
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
