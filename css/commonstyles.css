@@ -297,6 +297,7 @@ nav .navigation-list,
 
 .footer > .container {
   display: flex;
+  justify-content: space-between;
 }
 
 .join-container {
